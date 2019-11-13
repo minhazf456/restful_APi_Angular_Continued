@@ -18,6 +18,6 @@ export class HttpService {
   getTask(){
     // let tempObservable = this._http.get('/api/tasks/5b217223c3b93669afffb276');
     // tempObservable.subscribe(data => console.log("Got our task!", data));
-    return this._http.get('/api/tasks/5b217223c3b93669afffb276');
+    return this._http.get('/api/tasks/5b217223c3b93669a     ');
   }
 }

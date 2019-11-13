@@ -14,12 +14,11 @@ export class AppComponent implements OnInit {
     this.getTasksFromService();
   }
   getTasksFromService() {
-    let observable = this._httpService.getTasks();
+    const observable = this._httpService.getTasks();
     observable.subscribe(data => {
-      console.log("Got our tasks!", data)
-      for (var task of data['tasks']) {
-        this.tasks.push(task);
-      }
+      console.log("Got our tasks!", data);
+        this.tasks= data['tasks'];  ///// we receiving data, from data we are taking only tasks. and storing the data in the tasks array
+
     });
   }
 }

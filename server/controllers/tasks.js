@@ -17,7 +17,7 @@ module.exports = {
         newtask.save(function(err){
         if(err) {
             console.log(err);
-            response.json({message: "error", error: "DANGER WILL ROBINSON!"});
+            response.json({message: "error", error: err});
         } else {
             response.json({message: "GREAT SUCCESS", added: request.body.title});
         }
